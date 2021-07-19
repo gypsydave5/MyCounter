@@ -21,3 +21,12 @@ CounterTest >> testCountSetter [
 	self assert: c count equals: r.
 	
 ]
+
+{ #category : #tests }
+CounterTest >> testIncrement [
+
+	| counter |
+	counter := Counter new.
+	counter increment.
+	self assert: counter count equals: 1.
+]

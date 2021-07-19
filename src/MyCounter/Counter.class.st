@@ -52,6 +52,11 @@ Counter >> count: anInteger [
 	count := anInteger
 ]
 
+{ #category : #operating }
+Counter >> increment [
+	count := count + 1.
+]
+
 { #category : #initialization }
 Counter >> initialize [
 	count := 0.

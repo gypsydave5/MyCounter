@@ -5,10 +5,19 @@ Class {
 }
 
 { #category : #tests }
-CounterTest >> testCountAccessorAndSetter [
+CounterTest >> testCountAccessor [
 	| c |
 	c := Counter new.
-	c count: 10.
-	self assert: c count equals: 10.
+	self assert: c count equals: 0.
+	
+]
+
+{ #category : #tests }
+CounterTest >> testCountSetter [
+	| c r |
+	c := Counter new.
+	r := 1000 atRandom.
+	c count: r.
+	self assert: c count equals: r.
 	
 ]

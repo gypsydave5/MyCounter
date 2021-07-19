@@ -53,6 +53,11 @@ Counter >> count: anInteger [
 ]
 
 { #category : #operating }
+Counter >> decrement [
+	count := count - 1.
+]
+
+{ #category : #operating }
 Counter >> increment [
 	count := count + 1.
 ]

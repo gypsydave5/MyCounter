@@ -6,20 +6,30 @@ Class {
 
 { #category : #tests }
 CounterTest >> testCountAccessor [
-	| c |
-	c := Counter new.
-	self assert: c count equals: 0.
+	| counter |
+	counter := Counter new.
+	self assert: counter count equals: 0.
 	
 ]
 
 { #category : #tests }
 CounterTest >> testCountSetter [
-	| c r |
-	c := Counter new.
-	r := 1000 atRandom.
-	c count: r.
-	self assert: c count equals: r.
-	
+
+	| counter number |
+	counter := Counter new.
+	number := 1000 atRandom.
+	counter count: number.
+	self assert: counter count equals: number
+]
+
+{ #category : #tests }
+CounterTest >> testDecrement [
+
+	| counter |
+	counter := Counter new.
+	counter count: 22.
+	counter decrement.
+	self assert: counter count equals: 21.
 ]
 
 { #category : #tests }
